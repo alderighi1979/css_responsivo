@@ -103,13 +103,18 @@ aside .noticia{
     row-gap: 5%;
 }
 
+.botao-menu button{
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
-    .conteudo{
+    .conteudo, 
+    .botao-menu button{
         display: block;
     }
 
     .container{
-        max-width: 90px;
+        max-width: 90%;
     }
     
     .destaque .noticia a{
@@ -132,7 +137,7 @@ aside .noticia{
         padding-left: 0;
     }
 
-    header div .container{
+    header div.container{
         flex-direction: column;
     }
 
@@ -172,5 +177,22 @@ aside .noticia{
     .botao-menu button{
         padding: 8px;
     }
+}
 
-}   
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .botao-menu{
+        display: none;
+    }
+
+    .destaque .noticia{
+        font-size: 1.5em;
+    }
+
+    .noticias{
+        grid-template-columns: repeat(2, 49%);
+    }
+}
